@@ -1,0 +1,34 @@
+{
+  "name": "FileBrowser Quantum",
+  "package": "xyz.xmue.filebrowserquantum",
+  "description": "基于 Web 的文件管理器和 FileBrowser 项目的大规模分支",
+  "homepage": "https://github.com/gtsteffaniak/filebrowser",
+  "author": "gtsteffaniak",
+  "app_features": [],
+  "subdomain": "filebrowser",
+  "version": "0.0.1",
+  "iconPath": "logo.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "filebrowser_80_80": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_gtstef_filebrowser": {
+    "originalImage": "gtstef/filebrowser",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/mxuexxmy/gtstef/filebrowser:ae02c82387fcdea4",
+    "timestamp": "2025-05-11T06:28:53.492Z"
+  },
+  "filebrowser_volume_/folder_action": "emptyDir",
+  "filebrowser_volume_/folder_location": "app_data",
+  "filebrowser_volume_/home/filebrowser/database_action": "emptyDir",
+  "filebrowser_volume_/home/filebrowser/database_location": "app_data",
+  "filebrowser_volume_/home/filebrowser/config.yaml_action": "emptyDir",
+  "filebrowser_volume_/home/filebrowser/config.yaml_location": "app_data"
+}

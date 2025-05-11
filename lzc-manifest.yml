@@ -1,0 +1,24 @@
+lzc-sdk-version: "0.1"
+name: FileBrowser Quantum
+package: xyz.xmue.filebrowserquantum
+version: 0.0.1
+description: 基于 Web 的文件管理器和 FileBrowser 项目的大规模分支
+homepage: https://github.com/gtsteffaniak/filebrowser
+author: gtsteffaniak
+application:
+  subdomain: filebrowserquantum
+  background_task: false
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://filebrowser.xyz.xmue.filebrowserquantum.lzcapp:80/
+services:
+  filebrowser:
+    image: registry.lazycat.cloud/mxuexxmy/gtstef/filebrowser:ae02c82387fcdea4
+    user: root
+    binds:
+      - /lzcapp/var/folder:/folder
+      - /lzcapp/var/database:/home/filebrowser/database
+      - /lzcapp/pkg/content/config/config.yaml:/home/filebrowser/config.yaml

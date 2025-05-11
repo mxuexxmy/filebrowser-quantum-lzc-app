@@ -1,0 +1,9 @@
+services:
+  filebrowser:
+    volumes:
+      - './data/folder:/folder'
+      - './data/database:/home/filebrowser/database'
+      - './data/config.yaml:/home/filebrowser/config.yaml'
+    ports:
+      - '80:80'
+    image: gtstef/filebrowser
