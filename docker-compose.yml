@@ -1,9 +1,9 @@
 services:
   filebrowser:
     volumes:
-      - './data/folder:/folder'
+      - './data/folder:/srv'
       - './data/database:/home/filebrowser/database'
-      - './data/config.yaml:/home/filebrowser/config.yaml'
+      - './app-resource/config/config.yaml:/home/filebrowser/config.yaml'
     ports:
-      - '80:80'
+      - '9080:80'
     image: gtstef/filebrowser
